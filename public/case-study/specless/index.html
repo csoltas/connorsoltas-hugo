@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>connor soltas :: designers without borders</title>
+
+    
+    <link href="http://csoltas.github.io/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://csoltas.github.io/css/connor.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    
+    
+    
+
+    <meta name="generator" content="Hugo 0.16-DEV" />
+  </head>
+
+<body>
+
+	<header>
+	<h1>connor soltas</h1>
+	<ul>
+		<a href="http://csoltas.github.io/blog"><li>blog</li></a>
+		<a href="http://csoltas.github.io/project"><li>projects</li></a>
+		<a href="http://csoltas.github.io/"><li>work</li></a>
+		<a href="http://csoltas.github.io/about"><li>about</li></a>
+		<a href="mailto:csoltas@gmail.com"><li>contact</li></a>
+	</ul>
+</header>
+	<div class="container">
+		<div class="row case-study">
+			<div class="parallelogram case-study">
+				<h2 class="case-study">designers without borders</h2>
+			</div>
+		</div>
+		<div class="row case-study">
+			<div class="col-md-8 col-md-offset-2">
+				<p>
+					How making a design tool for online advertisers led to big questions about image editing and the responsive web.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<img src="http://csoltas.github.io/img/specless_big.png" class="big">
+	</div>
+	<div class="container">
+		<div class="row case-study">
+			
+
+<h3 id="some-context:7c9e24799cf16c189e65838d6a517cec">some context</h3>
+
+<p>Designers of online ad campaigns have to think inside the box. That is, their tools constrain them to canvases whose fixed dimensions don&rsquo;t reflect the near-infinite variety of proportions their ad, once published on the web, will eventually take on.</p>
+
+<p>It&rsquo;s a problem for them because most designers don&rsquo;t know how to code their ad to respond under different aspect ratios. They just have to design a ton of variations one-by-one, then share all those with developers. Which takes time and money.</p>
+
+<p><a href="http://gospecless.com">Specless</a> solves that. Their founders Steve and Shashank brought me in to do a ground-up redesign of Specless&rsquo;s flagship enterprise web app&mdash;a design tool that writes code for the ad automatically, allowing ad designers to create just one ad for all possible shapes and sizes, and visualize precisely how it&rsquo;ll look.</p>
+
+<p><img src="/img/specless-casestudy1.jpg"></p>
+
+<h3 id="big-questions:7c9e24799cf16c189e65838d6a517cec">big questions</h3>
+
+<p>Turns out the problem is really hairy.</p>
+
+<p>The challenge fundamentally isn&rsquo;t to design a nicer experience for creatives. It&rsquo;s to make the front-end coding framework that underpins context-aware ads into something that&rsquo;s no less visually intuitive than Photoshop. If the app itself can get designers to think like front-end developers (whether they know it or not), then the automatically-generated code will be simpler and it will behave better in a wider array of situations.</p>
+
+<p>This is hard because it means uniting the way designers work with the way developers think. Traditionally these are seen as polar opposites.</p>
+
+<p><img src="/img/specless-casestudy2.jpg"></p>
+
+<p>Nobody tells you where the line between &ldquo;not enough&rdquo; and &ldquo;too much&rdquo; abstraction is.</p>
+
+<p>For instance, the app would have to encourage designers to think about hierchical <a href="http://cascade-framework.com/">Cascade</a> concepts like &ldquo;flowlanes&rdquo; and &ldquo;breakpoints.&rdquo; But should it force these concepts to the fore, at the expense of a simple interface? It would have to be a graphics editor without defined canvas boundaries. But should it display one canvas, or several&mdash;as it really is? It would have to convey branching conditional logic without outright teaching designers how to code. But how deep down the rabbit hole should the app push them?</p>
+
+<p><img src="/img/specless-casestudy3.jpg"></p>
+
+<p>But I figured as long as I could nail the few genuinely tricky interface questions, then the rest of the tool could parrot a stripped-down Photoshop&mdash;making for a mostly familiar experience.</p>
+
+<h3 id="familiar-solutions:7c9e24799cf16c189e65838d6a517cec">familiar solutions</h3>
+
+<p>Over the course of a month I met every few days with Steve, Shashank, and their lead frontend developer Michael. I&rsquo;d storyboard the wireframes in their most recent state&mdash;and the three of them, usually Steve, the CEO, would call out issues as we went.</p>
+
+<p>Making branched logic visual seemed like a dead-end, so at first, I tried to avoid designs that wore the full complexity of Cascade on their sleeve. I pretended breakpoints and flowlanes were equivalent concepts (when really the former is always a child of the latter), and I designed digital <a href="https://en.wikipedia.org/wiki/Slide_rule">slide rules</a> and <a href="http://lumberjocks.com/assets/pictures/reviews/32463.jpg">squares</a> as digital analogues of flexible measurement devices users might already be familiar with.</p>
+
+<p><img src="/img/specless-casestudy4.jpg"></p>
+
+<p>The outcome looked okay (if somewhat heavy-handed), but Steve wanted something that more transparently matched the way the code would actually be generated. The app needed to be honest about the code it wrote, we agreed. Flowlanes were flowlanes and breakpoints were breakpoints.</p>
+
+<p>So, back to the drawing board. Instead, I turned to familiar digital tools as control analogues. Stacked &ldquo;timelines&rdquo; and &ldquo;playheads&rdquo;&mdash;borrowed from video editing, with which designers might be even more familiar&mdash;provided a simpler solution that more accurately reflected the ways CSS rules can overwrite one another. To create a new breakpoint, the user could just click the &ldquo;+&rdquo; where the rulers intersected and drag a new breakpoint across the ruler. Moving between breakpoints and flowlanes was easy, too, since big swaths of the canvas or ruler could be activated as giant buttons. And adding animation/interactivity was also straightforward&mdash;you just opened the drawer beneath the layers panel.</p>
+
+<p><img src="/img/specless-casestudy9.jpg"></p>
+
+<p>The completed project was an <a href="https://invisionapp.com/">InVision</a> workflow showing how the new product could reproduce Specless&rsquo;s latest client project&mdash;a huge responsive ad for Netflix, which took 2-3 days of hand-coding&mdash;in about 5-10 minutes. Steve and the Specless team were thrilled with the result, went on to a successful fundraise, and began immediately building out the redesign of their new flagship web app in testable pieces.</p>
+
+<p><img src="/img/specless-casestudy6.jpg">
+<img src="/img/specless-casestudy7.jpg">
+<img src="/img/specless-casestudy8.jpg"></p>
+
+		</div>
+	</div>
+
+	<footer>&copy; connor soltas 2016</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

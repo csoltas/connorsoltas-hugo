@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>connor soltas :: rethinking onboarding</title>
+
+    
+    <link href="http://csoltas.github.io/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://csoltas.github.io/css/connor.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    
+    
+    
+
+    <meta name="generator" content="Hugo 0.16-DEV" />
+  </head>
+
+<body>
+
+	<header>
+	<h1>connor soltas</h1>
+	<ul>
+		<a href="http://csoltas.github.io/blog"><li>blog</li></a>
+		<a href="http://csoltas.github.io/project"><li>projects</li></a>
+		<a href="http://csoltas.github.io/"><li>work</li></a>
+		<a href="http://csoltas.github.io/about"><li>about</li></a>
+		<a href="mailto:csoltas@gmail.com"><li>contact</li></a>
+	</ul>
+</header>
+	<div class="container">
+		<div class="row case-study">
+			<div class="parallelogram case-study">
+				<h2 class="case-study">rethinking onboarding</h2>
+			</div>
+		</div>
+		<div class="row case-study">
+			<div class="col-md-8 col-md-offset-2">
+				<p>
+					What if an app existed solely to have the easiest, most rewarding setup process imaginable -- and that was it?
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<img src="http://csoltas.github.io/img/glidera-big.png" class="big">
+	</div>
+	<div class="container">
+		<div class="row case-study">
+			
+
+<h3 id="what-does-this-thing-do-anyway:6a898cf7393fef36fc5fd1f2fdc0d321">what does this thing do, anyway?</h3>
+
+<p>Mike, Mohammed, and Dave thought <a href="http://glidera.io">their startup Glidera</a>&rsquo;s web app looked bad. When I asked why, they couldn&rsquo;t articulate what about it didn&rsquo;t appeal to them, or what they would change. It just didn&rsquo;t feel hip or modern to them.</p>
+
+<p>They brought me in to give the Glidera web app a &ldquo;facelift,&rdquo; as they put it. So the four of us spent over an hour in one of <a href="https://techstars.com/">Techstars</a>&rsquo; conference rooms, talking through their design gripes&mdash;some large and abstract, others incredibly specific.</p>
+
+<p><img src="/img/glidera-casestudy1.jpg"></p>
+
+<p>While I listened, I also tried to piece together what a facelift would do for their company. Sure, their app didn&rsquo;t fit my personal aesthetics, but I wasn&rsquo;t the target user. Their core business wasn&rsquo;t a web interface for consumers&mdash;it was a proprietary API for their partners: Bitcoin wallet developers. Curious, I asked, &ldquo;Who actually needs to use the site? What does this thing do, anyway?&rdquo;</p>
+
+<p>&ldquo;The site&rsquo;s just for end-users to connect their bitcoin wallet to us.&rdquo;</p>
+
+<p>That one comment changed everything about the project. What they said meant that once the end-user got her account set up on Glidera&mdash;in effect connecting a bitcoin wallet to Glidera&rsquo;s API&mdash;then everything was good; the user was done and wouldn&rsquo;t need to use the Glidera web app again unless there were problems with her bitcoin wallet.</p>
+
+<p>So the site needed to be fantastic at just one thing: onboarding users. That was all it did.</p>
+
+<p>Everyone knows form follows function. Ideally, that means any quest to solve ugliness should start with a search for brokenness. It rarely happens that way, and sometimes for good reason&mdash;it&rsquo;s cheaper and faster to tweak colors and fonts than to tease out underlying design problems.</p>
+
+<p>But Glidera had time and wanted to prioritize design.</p>
+
+<p>We went full-bore. Knowing that the web app basically had one feature lent an entirely different perspective on the problem. The app&rsquo;s division across four pages seemed totally unnecessary, and even confusing for users who weren&rsquo;t already keenly aware of what the app was supposed to help them accomplish. It didn&rsquo;t guide them through the only feature that mattered to it: setup. And it certainly didn&rsquo;t reward them for completing setup.</p>
+
+<h3 id="shifting-gears:6a898cf7393fef36fc5fd1f2fdc0d321">shifting gears</h3>
+
+<p>I focused on a new question: What would an app that existed solely to have the easiest, most rewarding setup process imaginable look like?</p>
+
+<p>I came back to the Glidera team suggesting they scrap the front-end and rebuild it as a simple one-page app. They had only asked for a facelift, but I responded that the reason the site looked bad was that it wasn&rsquo;t actually designed to do its purpose. Its multiple sections didn&rsquo;t encourage users to complete signup&mdash;they distracted users with content that wasn&rsquo;t useful until setup was complete. And the setup page itself added to the confusion&mdash;it wasn&rsquo;t clear that the setup process had to be completed in a specific order, or that, at any given point in the process, the user had a &ldquo;next step&rdquo; waiting for them.</p>
+
+<p>In the desktop version of the app, I turned the setup steps into a horizontal timeline that clearly indicated your next step in the process. The app also suggested its buy/sell functionality below in a non-distracting way. Clicking the &ldquo;next step&rdquo; node on the timeline would trigger a modal with a simple form and a huge green checkmark, celebrating each step you completed.</p>
+
+<p><img src="/img/glidera-casestudy2.jpg">
+<img src="/img/glidera-casestudy3.jpg">
+<img src="/img/glidera-casestudy4.jpg"></p>
+
+<p>Once you finished setup, the timeline itself would vanish entirely. Then you&rsquo;d only see three buttons on the upper-right that allowed you to manage or edit your information. You could also buy or sell bitcoin directly through the web app, but since that wasn&rsquo;t the app&rsquo;s intended purpose, it stayed low on the page, almost below the fold.</p>
+
+<p>They liked the idea, and we ran with it.</p>
+
+<p><img src="/img/glidera-casestudy5.jpg"></p>
+
+<h3 id="mobile-too:6a898cf7393fef36fc5fd1f2fdc0d321">mobile, too</h3>
+
+<p>At least in some abstract sense, an ideal onboarding process looks different on mobile from on a desktop. If Glidera was to optimize onboarding for mobile, too, their site couldn&rsquo;t just be a normal responsive site. It would have to &ldquo;respond&rdquo; into a format that felt almost native&mdash;like the best mobile sites.</p>
+
+<p>Since mobile users constituted a significant proportion of their new signups, I spent time tailoring the mobile site experience to make it even better than the desktop equivalent. The end result split the setup steps across five different, super-simple screens, navigated horizontally like intro screens in a native app.</p>
+
+<p><img src="/img/glidera-casestudy6.png"></p>
+
+<h3 id="the-ui-kit:6a898cf7393fef36fc5fd1f2fdc0d321">the ui kit</h3>
+
+<p>The completed project consisted of a copy/paste-able UI kit, written with HTML/CSS/JS, including all the different front-end elements Glidera would need to build out the new web app, both for desktop and mobile browsers.</p>
+
+		</div>
+	</div>
+
+	<footer>&copy; connor soltas 2016</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
