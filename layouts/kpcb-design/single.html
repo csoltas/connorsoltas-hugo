@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{{ .Site.Title }} :: {{ .Title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}css/kpcb-design.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {{ .Hugo.Generator }}
+  </head>
+
+  <body>
+  <a name="intro"></a>
+  <header>
+    <ul>
+      <a href="#intro"><li>Intro</li></a>
+      <a href="#problem"><li>Problem</li></a>
+      <a href="#process"><li>Assumptions/process</li></a>
+      <a href="#dashboard"><li>Rider dashboard</li></a>
+      <a href="#nav"><li>Slide nav</li></a>
+      <a href="#tray"><li>Intent-to-ride tray</li></a>
+      <a href="#new-features"><li>Request ahead</li></a>
+      <a href="#new-features"><li>Request for others</li></a>
+      <a href="#faq"><li>FAQ</li></a>
+    </ul>
+  </header>
+
+  <div class="container-full" id="intro-bg">
+    <div id="intro">
+      <div id="banner">
+        <h1>Rethinking rideshare</h1>
+        <p id="subtitle">The casual Uber rider's experience doesn't start with tapping the "Request uberX" button. It starts the moment a person realizes she needs to get from one place to another.</p>
+        <p class="small">An interaction and interface design spec by <a href="{{ .Site.BaseURL }}" id="byline-link">Connor Soltas</a></p>
+      </div>
+    </div>
+  </div>
+
+  <a name="problem"></a>
+  <div class="container-fluid container-full">
+    <div id="problem" class="row">
+      <div class="left problem col-md-6">
+        <h2>The problem</h2>
+
+        <p>Opening the Uber app signals very strong intent -- as a rider, you have specific goals in mind when you open Uber.</p>
+
+        <p>But Uber’s interface actually buries much of the information its riders are signalling that they want. When you first open Uber, the cars around you aren't what matters; you want to know things like wait time, whether to take uberXL or uberX, price, and how long it will take to get where you're going. And that info isn't available at a glance.</p>
+
+        <p>This not only makes it hard for riders to get what they want, but more importantly, it makes it easier to lose customers prematurely. It neglects the buildup to action, the part of the Uber experience that happens before you buy.</p>
+
+        <p>But Uber can help riders realize their strong but diverse intents without sacrificing much. Uber can be a powerfully intuitive dashboard of useful transportation information. The rest of this is about what that Uber might look like.</p>
+      </div>
+      <div class="right problem col-md-6">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-problem.png">
+        <span class="caption">How does this help me decide if I should hail an Uber?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid container-full" id="timelines-bg">
+    <div id="timelines" class="text-center">
+      <h2>Ride lifecycle</h2>
+      <img src="{{ .Site.BaseURL }}img/kpcb-timeline.png">
+    </div>
+  </div>
+
+  <a name="process"></a>
+  <div class="container-fluid container-full" id="process-bg">
+    <div id="process" class="row">
+      <div class="left col-md-7">
+        <div class="row">
+          <div class="col-md-6 process">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-notes.jpg">
+          </div>
+          <div class="col-md-6 process">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-spread.jpg">
+          </div>
+          <div class="col-md-6 process">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-assumption.jpg">
+          </div>
+          <div class="col-md-6 process">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-draft.jpg">
+          </div>
+          <div class="col-md-6 process last">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-interview.jpg">
+          </div>
+          <div class="col-md-6 process last">
+            <img src="{{ .Site.BaseURL }}img/kpcb-process-comm.jpg">
+          </div>
+        </div>
+        <span class="caption process"><a href="{{ .Site.BaseURL }}kpcb-notes.pdf" target="_blank">Download</a> all my notes and sketches (PDF)</span>
+      </div>
+      <div class="col-md-5 right">
+        <h3>Assumptions</h3>
+        
+        <p>I made a lot of ’em. I assumed this redesign would be rolled out only in markets where Uber has a large, dense, and well-established user base.</p>
+
+        <p>I also made assumptions about how Uber wants to position itself. If Uber benefits dramatically from getting riders to hail Ubers on a whim, without forethought, then my solution bombs.</p>
+
+        <p>Instead, I assumed that everyone wants to be seen as rational whether they really are or not, and everyone wants to use tools that make them feel more in control of their lives. I assumed Uber wants to position itself to benefit from those natural instincts.</p>
+        
+        <h3>Process</h3>
+        
+        <p>I began this project by brainstorming around user intent, in the context of Uber's consumer app. I conducted interviews by phone, in person, and online; reshaped my ideas with feedback; sketched interfaces and conceptual frameworks; designed mostly in Sketch; and repeated that whole process several more times. The redesigned features below are culled down from about a dozen more. <a href="{{ .Site.BaseURL }}kpcb-notes.pdf" target="_blank">Download all my notes and sketches here (PDF).</a></p>
+      </div>
+    </div>
+  </div>
+
+  <a name="dashboard"></a>
+  <div class="container-fluid container-full" id="dashboard-bg">
+    <div id="dashboard-intro" class="row">
+      <div class="left col-md-6">
+        <span>Redesign element #1</span>
+        <h2>Rider dashboard</h2>
+        <h3>The info you need, right on Uber's home screen.</h3>
+        <p>Wait time, total trip time, surge pricing, and fare estimates display and update in real time as soon as you give Uber enough information to calculate them. Take control of your transportation plans, with zero extra taps.</p>
+
+        <h3>Informational transparency</h3>
+        <p>The give-and-take of information between rider and app is more transparent: Uber now tells you upfront what it requires to get, say, a fare estimate. These "transactions" become extremely intuitive and even enjoyable, as the dashboard responds instantly to your input. This helps you decide when to request, rather than asking you to request immediately or leave for a competitor.</p>
+
+        <h3>No more map?</h3>
+        <p>The rider dashboard makes the most useful information the most prominent (e.g., wait time). So map view just appears when you want it: just tap “choose uberX” and the textbox at the bottom slides to the top to reveal the map. To see the map immediately or change pickup location, just drag the textbox up manually. <a href="#">More on this in the FAQ.</a></p>
+      </div>
+      <div class="right col-md-6 text-right">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-first.jpg">
+      </div>
+    </div>
+    <div id="dashboard-gallery" class="row">
+      <div class="col-md-4 text-center">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-simplest.jpg">
+      </div>
+      <div class="col-md-4 text-center">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-surge.jpg">
+      </div>
+      <div class="col-md-4 text-center">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-surge-location.jpg">
+      </div>
+    </div>
+
+    <a name="nav"></a>
+    <div id="dashboard-nav" class="row">
+      <div class="left col-md-6">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-slide.jpg">
+      </div>
+      <div class="right col-md-6">
+        <span>Redesign element #2</span>
+        <h2>Slide nav</h2>
+        <h3>One intuitive tool for selection and navigation.</h3>
+        <p>The slide nav combines two visual metaphors in a natural way for cross-product comparison: a magnifying glass and a button. Slide a product under the circular button at the center, and watch the dashboard calculations and modules adjust themselves instantly. Tap the product’s name when it’s under the button to launch map view and proceed to requesting.</p>
+
+        <h3>Honest about what it does.</h3>
+        <p>The dark slide nav’s visual contrast with the white dashboard, along with the text “choose,” make it more obvious how to proceed than the current Uber’s “set pickup location” button, which doesn’t actually set your pickup location at all (it inexplicably sets which Uber product you’re using).</p>
+
+        <h3>Better visual metaphors.</h3>
+        <p>With its subtle magnifying-glass effect, the slide nav more naturally reflects the way that tapping another Uber product reveals more detail about it. Compare this to Uber’s “moveable button,” which, unlike a magnifying glass, doesn’t suggest revealed detail. There’s no way to discover that tapping the moveable button (twice!) brings up an ETA, a minimum fare, etc., except by accident -- or someone else telling you.</p>
+      </div>
+    </div>
+    <div id="dashboard-gallery2" class="row">
+      <p class="text-center">(Bonus redesign for fun: new "Enter destination" interface for the rider dashboard)</p>
+      <div class="col-md-6 text-right">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-destn.jpg">
+      </div>
+      <div class="col-md-6 text-left">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-rd-destn-keyboard.png">
+      </div>
+    </div>
+  </div>
+
+  <a name="tray"></a>
+  <div class="container-fluid container-full" id="tray-bg">
+    <div id="tray" class="row">
+      <div id="tray-header">
+        <span>Redesign element #3</span>
+        <h2>Intent-to-ride tray</h2>
+      </div>
+      <div class="row text">
+        <div class="col-md-7">
+          <h3>Where it all comes together.</h3>
+          <p>So now that Uber’s helped you monitor prices and wait times, you’ve tapped “choose uberX” because you’re finally ready to hail. Setting your pickup location and requesting is now a single decision, so it’s just a single tap.</p>
+
+          <h3>Consistent visual language</h3>
+          <p>In the current Uber app, tapping “set pickup location” banishes Wait Time to the tiniest font on the very bottom of the screen -- even when this information matters essentially to the decision to request. Hiding it doesn’t make users forget about it; it makes them frustrated. Instead, the intent-to-ride tray enlarges the wait time text and makes it a dark circular button which, familiarly, reveals detail when tapped (in the intent-to-ride tray that slides up).</p>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+          <h3>New feature possibilities</h3>
+          <p>In the interviews I conducted, two other features stood out as interviewee favorites: “request ahead” and “request for others.” See below for more.</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-right gallery">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-tray1.jpg">
+      </div>
+      <div class="col-md-6 text-left gallery">
+        <img class="img-ios" src="{{ .Site.BaseURL }}img/kpcb-tray2.jpg">
+      </div>
+    </div>
+      <a name="new-features"></a>
+      <div class="row" id="new-features">
+        <div class="col-md-6">
+          <h3>Request ahead</h3>
+          <p>Riders open Uber with strong but diverse intents. The fact that anyone repeatedly “checks” Uber implies failure to address one of these intent -- Uber should just check itself for you. “Request ahead” or "queue for later" would let riders set pickup/destination locations and a departure time, then give users the choice to let Uber auto-request for them or to receive a push notification when it’s time to request.</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Request for others</h3>
+          <p>Another one of those unaddressed intents: hailing an Uber for your child or your (ill or inebriated) friend. In my experience, this happens so often that Uber should design an interface around it. “Request for others” would enable the rider to view and interact with their ride (similar to fare-sharing) while allowing the requester user to monitor their friend’s or their child’s ride remotely.</p>
+        </div>
+      </div>
+    </div> 
+
+    <a name="faq"></a>
+    <div class="container-full container-fluid" id="faq-bg">
+      <div id="faq">
+        <div class="row">
+          <h2 class="text-center" style="margin-bottom: 40px;">FAQ</h2>
+          <div class="col-md-6">
+            <h3>Are you sure about getting rid of the map?</h3>
+            <p>The map isn’t going away anytime soon, and that’s a good thing. I don’t want to get rid of the map. But if you think about it, the reasons the map matters don’t become effective until you request an Uber (so that you can watch the car approach), or unless you’re in an area where you doubt the presence of Ubers altogether. Showing the map on the home screen was important when Uber’s value proposition was a new one, and users doubted whether a driver would actually appear to bring them somewhere. But today, riders in Manhattan don’t wonder whether an Uber will appear for them, provided they can watch it approach. So it makes sense to make the information they actually do wonder about bigger, and easier to keep tabs on.</p>
+          </div>
+          <div class="col-md-6">
+          <h3>Doesn’t Uber obfuscate the fare estimate intentionally?</h3>
+          <p>I think that’s correct, but referring back to my assumptions (people prefer to see themselves as rational actors), I also think Uber stands to gain by being more upfront about it -- provided they make other interface changes like the ones recommended here. Uber can lock users in early by framing the decision not as “If I see the price, I might not buy,” but rather as “If I see the price, Uber will help me wait until the surge goes away so that I can buy at the best price.” Of course, Uber already sends push notifications when surges drop, but my design takes this thinking more seriously and applies it across the Uber experience, to things like wait time and trip time.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Really though, is price transparency good for business?</h3>
+            <p>In the context of Uber, it’s a great question. But I think it falls somewhat outside the scope of human-centered design -- which I understand to be about solving users’ problems first, and the business’s problems second. It’s a question whose answer requires case-specific data I don’t have.</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Doesn’t tailoring to the buildup-to-action defeat the purpose of on-demand?</h3>
+            <p>Once you get the ride lifecycle right, you can do both -- because in some sense, short-notice Uber requests still have a buildup to action; it’s just a shorter one.</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Got another question you don't see here?</h3>
+            <p><a mailto="csoltas@gmail.com">Send me an email!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center">You made it to the end! Give yourself a pat on the back. Thanks for reading!</p>
+  <p class="text-center" style="color: #9D9DA3;">&copy; Connor Soltas 2016</p>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

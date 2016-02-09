@@ -1,0 +1,29 @@
+<div class="row">
+  {{ if .Params.thumbleft }}
+    <div class="col-md-7">
+    	<img src="{{ .Site.BaseURL }}img/{{ .Params.thumb }}" class="pull-left">
+    </div><!--	/.col	-->
+    <div class="col-md-5">
+    	<div class="parallelogram">
+  	  	<h2>{{ .Title }}</h2>
+  	  </div>
+  	  <p>
+  		  {{ .Params.teaser }}
+        <a href="{{ .Permalink }}" class="preview-link">{{ .Params.previewlink }}</a>
+  	  </p>
+    </div><!--	/.col	-->
+  {{ else }}
+    <div class="col-md-5">
+      <div class="parallelogram">
+        <h2>{{ .Title }}</h2>
+      </div>
+      <p>
+        {{ .Params.teaser }}
+        <a href="{{ .Permalink }}" class="preview-link">{{ .Params.previewlink }}</a>
+      </p>
+    </div><!--  /.col -->
+    <div class="col-md-7">
+      <img src="{{ .Site.BaseURL }}img/{{ .Params.thumb }}" class="pull-right">
+    </div><!--  /.col -->
+  {{ end }}
+</div><!--	/.row	-->

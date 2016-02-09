@@ -1,0 +1,16 @@
+{{ partial "head.html" . }}
+
+<body>
+
+	{{ partial "banner.html" . }}
+
+	<div class="container">
+		{{ range .Data.Pages }}
+			{{ .Render "li" }}
+		{{ end }}
+	</div><!--	/.container  -->
+
+	{{ partial "footer.html" }}
+
+</body>
+</html>
